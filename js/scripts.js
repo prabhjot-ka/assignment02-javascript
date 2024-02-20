@@ -12,7 +12,7 @@ function changeCustomColor() {
     const userInput = parseInt(customNumberInput.value);
 
     // Display student id
-    myStudentId.textContent = 'Student ID: YourStudentID';
+    myStudentId.textContent = 'Student ID: 200554143';
 
     // Change background color based on conditions
     if (userInput < 0 || userInput > 100) {
