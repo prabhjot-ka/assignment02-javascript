@@ -2,33 +2,56 @@
 <html>
 
 <head>
+    <!-- Define character set and viewport for better rendering -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Set the title of the document -->
     <title>Assignment 2 | COMP1073 Client-Side JavaScript</title>
+    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <!-- Container for student ID paragraph -->
     <div>
+        <!-- Paragraph to display student ID -->
         <p id="myStudentId"></p>
     </div>
+    
+    <!-- Container for user input (number) -->
     <div>
+        <!-- Label for number input -->
         <label for="customNumber">Enter number from 1 to 100:</label>
+        <!-- Number input field -->
         <input id="customNumber" type="number" placeholder="" />
     </div>
+    
+    <!-- Container for buttons -->
     <div>
+        <!-- Button to change custom color -->
         <button class="custColor">Change custom color</button>
+        <!-- Button to change random color -->
         <button class="randColor">Change random color</button>
     </div>
+    
+    <!-- Container for image selection -->
     <div>
+        <!-- Label for image selection -->
         <label for="imageSelect">Select Image</label>
+        <!-- Dropdown/select element for image selection -->
         <select id="imageSelect">
+            <!-- Default option prompting user to choose an image -->
             <option value="">Please choose…</option>
         </select>
     </div>
+    
+    <!-- Container for displaying selected image -->
     <div>
+        <!-- Image element to display selected image -->
         <img id="images" src="" alt=""></img>
     </div>
+    
+    <!-- Include external JavaScript file with defer attribute -->
     <script defer src="js/scripts.js"></script>
 </body>
 

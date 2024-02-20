@@ -1,4 +1,4 @@
-// constants for query selector
+// Constants for query selector
 const customNumberInput = document.getElementById('customNumber');
 const custColorBtn = document.querySelector('.custColor');
 const randColorBtn = document.querySelector('.randColor');
@@ -6,8 +6,9 @@ const imageSelect = document.getElementById('imageSelect');
 const images = document.getElementById('images');
 const myStudentId = document.getElementById('myStudentId');
 
-// function to change bg color from user input and add student id
+// Function to change background color from user input and add student id
 function changeCustomColor() {
+    // Parse user input to an integer
     const userInput = parseInt(customNumberInput.value);
 
     // Display student id
@@ -29,8 +30,9 @@ function changeCustomColor() {
     }
 }
 
-// function to change bg color from random no.
+// Function to change background color from random number
 function changeRandomColor() {
+    // Generate a random number between 1 and 100
     const randomInput = Math.floor(Math.random() * 100) + 1;
 
     // Display student id
@@ -52,12 +54,15 @@ function changeRandomColor() {
     }
 }
 
-// function to generate options for select list
+// Function to generate options for the select list
 function addList() {
-    const imgOptions = ['img/img1.jpg', 'img/img2.jpg', 'img/img3.jpg', 'img/img4.jpg', 'img/img5.jpg']; // Update with your actual image paths
+    // Array of image paths (update with your actual image paths)
+    const imgOptions = ['img/img1.jpg', 'img/img2.jpg', 'img/img3.jpg', 'img/img4.jpg', 'img/img5.jpg'];
+
     // Clear existing options
     imageSelect.innerHTML = '<option value="">Please choose...</option>';
 
+    // Loop through image options and create select list options
     for (let i = 0; i < imgOptions.length; i++) {
         const option = document.createElement('option');
         option.value = imgOptions[i];
@@ -66,13 +71,13 @@ function addList() {
     }
 }
 
-// function to change image
+// Function to change the displayed image
 function changeImage() {
     const selectedImage = imageSelect.value;
     images.src = selectedImage; // The value of selectedImage already includes the path 'img/'
 }
 
-// event listeners for on click event of buttons and select
+// Event listeners for click events of buttons and select
 custColorBtn.addEventListener('click', changeCustomColor);
 randColorBtn.addEventListener('click', changeRandomColor);
 imageSelect.addEventListener('click', addList);
