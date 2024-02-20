@@ -36,7 +36,7 @@ function changeRandomColor() {
     const randomInput = Math.floor(Math.random() * 100) + 1;
 
     // Display student id
-    myStudentId.textContent = 'Student ID: YourStudentID';
+    myStudentId.textContent = 'Student ID: 200554143';
 
     // Change background color based on conditions
     if (randomInput < 0 || randomInput > 100) {
